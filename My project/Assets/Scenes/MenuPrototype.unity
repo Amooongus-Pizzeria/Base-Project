@@ -10539,6 +10539,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff756c3a0f6905643a683cc61aa8e431, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transitionAnim: {fileID: 0}
+  sceneName: Om
 --- !u!4 &1032521007
 Transform:
   m_ObjectHideFlags: 0

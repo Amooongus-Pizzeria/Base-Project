@@ -6,13 +6,24 @@ using UnityEngine.UI;
 
 public class LoadScene : MonoBehaviour
 {
+    public Animator transitionAnim;
+    public string sceneName;
+
     void Start()
     {
-        //SceneManager.LoadScene("OtherSceneName", LoadSceneMode.Additive);
+        
     }
 
+    
     public void LoadA(string scenename)
     {
-        SceneManager.LoadScene(scenename);
+        StartCoroutine(LoadSceneCo());
+    }
+
+    IEnumerator LoadSceneCo()
+    {
+        //transitionAnim.SetTrigger("end");
+        yield return new WaitForSeconds(1.5f);
+        SceneManager.LoadScene(sceneName);
     }
 }
