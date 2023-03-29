@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Working/Om.unity
     guid: dee22295dc4926e49af0566dd4aefe5a
+  - enabled: 1
+    path: Assets/Scenes/Testing.unity
+    guid: 585a3eee48a9f9f4db5db9682c5f4708
+  - enabled: 1
+    path: Assets/Scenes/SaveLoadPersistentLevel.unity
+    guid: ae0253aadc6363d48af1246b36693ead
   m_configObjects: {}

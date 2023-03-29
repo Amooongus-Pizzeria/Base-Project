@@ -14,8 +14,8 @@ public class SavedGameState
         public class Entry
         {
             public GameObject Type;
-            public Vector3 Location;
-            public Vector3 Rotation;
+            public System.Tuple<float, float, float> Location;
+            // public Vector3 Rotation;
         }
 
         public string ID;
@@ -49,6 +49,8 @@ public class Saving : MonoBehaviour
 {
     [SerializeField] float autoTime = 60f; // auto-save every minute (this is in seconds)
 
+    [SerializeField] bool DEBUG_SAVE_TEST = false;
+
     List<saveable> SaveHandlers = new List<saveable>();
 
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
@@ -81,7 +83,11 @@ public class Saving : MonoBehaviour
 
     void Update()
     {
-        
+        if(DEBUG_SAVE_TEST)
+        {
+            DEBUG_SAVE_TEST = false; // make sure to turn it back off to a non-save state
+            RequestSave(SaveSlot.Slot1, SaveType.Manual);
+        }
     }
 
     public void RegisterHandler(saveable handler)
