@@ -5,7 +5,7 @@ using System.IO;
 using Newtonsoft.Json;
 using UnityEngine.SceneManagement;
 
-public class SavedGameState
+public class SavedGameState // triple nested classes
 {
     public int Version = 1;
 
@@ -14,7 +14,7 @@ public class SavedGameState
         public class Entry
         {
             public GameObject Type;
-            public System.Tuple<float, float, float> Location;
+            public System.Tuple<float, float, float> Location; // create a tuple because vectors aren't serilizable with Newtonsoft package
             // public Vector3 Rotation;
         }
 
@@ -27,7 +27,7 @@ public class SavedGameState
 
 public enum SaveSlot
 {
-    None,
+    None, // may not have anything saved or need to clear data to a "None" state - not yet implemented
     Slot1,
     Slot2,
     Slot3 // We give the user 3 save slots to override their data in
@@ -42,7 +42,7 @@ public enum SaveType
 
 public interface saveable
 {
-    void PrepareForSave(SavedGameState gameState);
+    void PrepareForSave(SavedGameState gameState); 
 }
 
 public class Saving : MonoBehaviour
