@@ -58,11 +58,12 @@ public class Saving : MonoBehaviour
     {
         for(int sceneIndex = 0;  sceneIndex < SceneManager.sceneCount; sceneIndex++)
         {
-            if(SceneManager.GetSceneAt(sceneIndex).name == "SaveLoadPersistentLevel") {
+            if(SceneManager.GetSceneAt(sceneIndex).name == "SaveLoadPersistentLevel") { // instantiating a scene into a scene (sort of) its a werid process
                 return;
             }
         }
-        SceneManager.LoadScene("SaveLoadPersistentLevel", LoadSceneMode.Additive);
+        // SaveLoadPresistentLevel scene 
+        SceneManager.LoadScene("SaveLoadPersistentLevel", LoadSceneMode.Additive); // loads the persistent scene ontop of the current loaded scene in the hiearchy
     }
 
     public static Saving Instance { get; private set; } = null; // initializing a singletone so that the instance of this script can be accessed anywhere
