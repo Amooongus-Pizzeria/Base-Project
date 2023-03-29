@@ -22,7 +22,7 @@ public class TestOliveSpawner : MonoBehaviour, saveable
             var location = spawned.Item1.transform.position;
             gameState.SpawnerState.SpawnedObjects.Add(new SavedGameState.SimpleSpawnerState.Entry()
             {
-                Location = new System.Tuple<float, float, float>(location.x, location.y, location.z),
+                Location = new System.Tuple<float, float, float>(location.x, location.y, location.z)
                 
             });
         }
@@ -32,8 +32,8 @@ public class TestOliveSpawner : MonoBehaviour, saveable
     {
         for(int i = 0; i < NumObjects; i++)
         {
-            Instantiate(olive, new Vector3(Random.Range(-5f, 5f), Random.Range(-5f, 5f), Random.Range(-5f, 5f)), Quaternion.identity); // instantiate an olive at a random position in the test scene
-            SpawnedOlives.Add(new System.Tuple<GameObject>(olive));
+            var oliver = Instantiate(olive, new Vector3(Random.Range(-5f, 5f), Random.Range(-5f, 5f), Random.Range(-5f, 5f)), Quaternion.identity); // instantiate an olive at a random position in the test scene
+            SpawnedOlives.Add(new System.Tuple<GameObject>(oliver));
         }
 
         Saving.Instance.RegisterHandler(this);
