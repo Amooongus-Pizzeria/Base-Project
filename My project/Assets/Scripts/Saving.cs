@@ -36,7 +36,7 @@ public enum SaveSlot
 public enum SaveType
 {
     Manual,
-    Automatic, // support for automatic time interval saving
+    Automatic, // support for automatic time interval saving (not implemented in this build but exists on a seperate client)
     Mission // no-support yet ~ but the premise is that the game saves at specefic setpoints
 }
 
