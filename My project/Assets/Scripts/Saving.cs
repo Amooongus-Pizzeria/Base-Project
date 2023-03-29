@@ -83,10 +83,10 @@ public class Saving : MonoBehaviour
 
     void Update()
     {
-        if(DEBUG_SAVE_TEST)
+        if (DEBUG_SAVE_TEST)
         {
-            DEBUG_SAVE_TEST = false; // make sure to turn it back off to a non-save state
-            RequestSave(SaveSlot.Slot1, SaveType.Manual);
+            DEBUG_SAVE_TEST = false; // can save however many times with this as the boolean just defaults to false after ticking the checkbox
+            RequestSave(SaveSlot.Slot1, SaveType.Manual); // save it in slot 1 for now
         }
     }
 

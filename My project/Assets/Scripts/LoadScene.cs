@@ -8,12 +8,6 @@ public class LoadScene : MonoBehaviour
 {
     public Animator transitionAnim;
     public string sceneName;
-
-    void Start()
-    {
-        
-    }
-
     
     public void LoadA(string scenename)
     {
