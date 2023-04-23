@@ -8,7 +8,8 @@ public class DragTopping : MonoBehaviour
 
     private void OnMouseDown()
     {
-        Vector2 difference = (Vector2) Camera.main.ScreenToWorldPoint(Input.mousePosition) - (Vector2) transform.position; 
+        Vector2 difference = (Vector2) Camera.main.ScreenToWorldPoint(Input.mousePosition) - (Vector2) transform.position;
+        TestToppingCounter.counter++;
     }
 
     private void OnMouseDrag()

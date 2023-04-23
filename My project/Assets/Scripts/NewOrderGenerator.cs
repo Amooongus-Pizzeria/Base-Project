@@ -7,7 +7,6 @@ using System;
 public class NewOrderGenerator : MonoBehaviour
 {
 
-
     public TextMeshProUGUI orderText;
 
     //presets of variables
@@ -19,11 +18,6 @@ public class NewOrderGenerator : MonoBehaviour
     bool olive = false;
     string order = "";
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        print("Click button to view new order!");
-    }
 
     //called everytime button is pressed
     public void ButtonPressed()
@@ -32,8 +26,8 @@ public class NewOrderGenerator : MonoBehaviour
         orderText.GetComponent<TextMeshProUGUI>().text = "Please make me a pizza with: \n" + order;
     }
 
-    // randomly generating a new order
 
+    //random booleans to generate new order
     public void GenerateNewOrder()
     {
         BooleanGenerator boolGen = new BooleanGenerator();
@@ -47,6 +41,7 @@ public class NewOrderGenerator : MonoBehaviour
         printNewOrder(red_sauce, cheese, pepperoni, mushroom, olive);
     }
 
+    //prints true items in list
     public void printNewOrder(bool r_s, bool ch, bool p, bool m, bool o)
     {
         if (r_s) { order = order + "\nRed Sauce"; }
@@ -55,8 +50,6 @@ public class NewOrderGenerator : MonoBehaviour
         if (p) { order = order + "\nPepperoni"; }
         if (m) { order = order + "\nMushroom"; }
         if (o) { order = order + "\nOlive"; }
-
-        //print out order 
     }
 
     public class BooleanGenerator
