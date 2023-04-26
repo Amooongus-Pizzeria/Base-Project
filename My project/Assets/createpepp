@@ -1,0 +1,41 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class createPepperoni : MonoBehaviour
+{
+    [SerializeField] string ID = "pepperoni"; 
+    public GameObject pepp; 
+    List<System.Tuple<GameObject>> pepps = new List<System.Tuple<GameObject>>();
+
+    public void toSave(SavedGameState gameState)
+    {
+        gameState.pepp.ID = ID;
+        foreach (var pep in peps)
+        {
+            var location = pep.Item1.transform.position;
+            gameState.pepps.Add(new SavedGameState.SimpleSpawnerState.Entry());
+            {
+                Location = new System.Tuple<float, float, float>(location.x, location.y, location.z);
+                
+            }
+        }
+    }
+
+    void Start()
+    {
+        for(int i = 0; i < NumObjects; i++)
+        {
+            var uno = Instantiate(pepp, new Vector3(Random.Range(-10f, 10f), Random.Range(-10f, 10f), Random.Range(-10f, 10f)), Quaternion.identity); 
+            pepps.Add(new System.Tuple<GameObject>(uno));
+        }
+
+        Saving.Instance.RegisterHandler(this);
+
+    }
+
+    void OnDestroy()
+    {
+        Saving.Instance.DeRegisterHandler(this);
+    }
+    }
