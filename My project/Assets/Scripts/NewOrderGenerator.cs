@@ -22,6 +22,7 @@ public class NewOrderGenerator : MonoBehaviour
     //called everytime button is pressed
     public void ButtonPressed()
     {
+        order = "";
         GenerateNewOrder();
         orderText.GetComponent<TextMeshProUGUI>().text = "Please make me a pizza with: \n" + order;
     }

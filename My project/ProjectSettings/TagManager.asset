@@ -43,3 +43,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Oven rack
+    uniqueID: 3335433149
+    locked: 0
+  - name: Oven cover
+    uniqueID: 746753319
+    locked: 0
