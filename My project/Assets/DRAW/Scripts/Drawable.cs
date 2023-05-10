@@ -140,7 +140,7 @@ namespace FreeDraw
         {
             // Is the user holding down the left mouse button?
             bool mouse_held_down = Input.GetMouseButton(0);
-            if (mouse_held_down && !no_drawing_on_current_drag)
+            if (mouse_held_down && !no_drawing_on_current_drag && Input.GetKey(KeyCode.Space))
             {
                 // Convert mouse coordinates to world coordinates
                 Vector2 mouse_world_position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
