@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class TopDownCamera : MonoBehaviour
 {
-    public float panSpeed = 20f;   // Speed at which the camera pans
+    public float panSpeed = 10f;   // Speed at which the camera pans
     public float panBorderThickness = 10f;   // Thickness of the border around the screen where panning is triggered
 
     // Update is called once per frame
