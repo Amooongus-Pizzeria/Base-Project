@@ -1,0 +1,37 @@
+using UnityEngine;
+public class merge : MonoBehaviour
+{
+    public Transform parentObject;
+    private GameObject moving;
+    private Vector3 displacement;
+
+    private void MouseOver()
+    {
+        // check if user's mouse is over a game object
+        RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+        if (hit.collider != null){
+            moving = hit.collider.gameObject;
+            displacement = moving.transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        }
+    }
+
+    private void MouseMove()
+    {
+        // check if there is a dragging object
+        if (moving != null){
+            // move the dragging object to the mouse position with the displacement
+            moving.transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition) + displacement;
+        }
+    }
+
+    private void MouseLift()
+    {
+        // check if there is a dragging object and if it is over the parent object
+        if (moving != null && parentObject != null && parentObject.GetComponent<Collider2D>().bounds.Contains(moving.transform.position)){
+            //merge the dragging object with the parent object
+            moving.transform.parent = parentObject;
+            moving.GetComponent<SpriteRenderer>().sortingOrder = 1;
+        }
+
+    }
+}
