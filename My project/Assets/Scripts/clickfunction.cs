@@ -4,12 +4,11 @@ using UnityEngine;
 using TMPro;
 using System;
 
-public class NewOrderGenerator : MonoBehaviour
+public class clickfunction : MonoBehaviour
 {
+    public Canvas CanvasObject; // Assign in inspector
+    public TextMeshProUGUI orderText;//inspector
 
-    public TextMeshProUGUI orderText;
-
-    //presets of variables
 
     bool red_sauce = false;
     bool cheese = false;
@@ -18,24 +17,27 @@ public class NewOrderGenerator : MonoBehaviour
     bool olive = false;
     string order = "";
 
-
-    //called everytime button is pressed
-    /*public void ButtonPressed()
+    void Start()
     {
-        order = "";
-        GenerateNewOrder();
-        orderText.GetComponent<TextMeshProUGUI>().text = "Please make me a pizza with: \n" + order;
-    }*/
+        CanvasObject = GetComponent<Canvas>();
+        CanvasObject.enabled = !CanvasObject.enabled;
+    }
 
+    void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.Escape))
+        {
+            order = "";
+            GenerateNewOrder();
+            orderText.GetComponent<TextMeshProUGUI>().text = "Please make me a pizza with: \n" + order;
 
-    //random booleans to generate new order
+            CanvasObject.enabled = !CanvasObject.enabled;
+        }
+    }
+
     public void GenerateNewOrder()
     {
         BooleanGenerator boolGen = new BooleanGenerator();
-
-        order = "";
-        orderText.GetComponent<TextMeshProUGUI>().text = "Please make me a pizza with: \n" + order;
-
         red_sauce = boolGen.NextBoolean();
         cheese = boolGen.NextBoolean();
         pepperoni = boolGen.NextBoolean();
@@ -55,20 +57,19 @@ public class NewOrderGenerator : MonoBehaviour
         if (m) { order = order + "\nMushroom"; }
         if (o) { order = order + "\nOlive"; }
     }
+}
 
-    public class BooleanGenerator
+public class BooleanGenerator
+{
+    System.Random rnd;
+
+    public BooleanGenerator()
     {
-        System.Random rnd;
-
-        public BooleanGenerator()
-        {
-            rnd = new System.Random();
-        }
-
-        public bool NextBoolean()
-        {
-            return rnd.Next(0, 2) == 1;
-        }
+        rnd = new System.Random();
     }
 
+    public bool NextBoolean()
+    {
+        return rnd.Next(0, 2) == 1;
+    }
 }
