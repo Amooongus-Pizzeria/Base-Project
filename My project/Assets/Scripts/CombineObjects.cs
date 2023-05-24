@@ -42,3 +42,7 @@ public class CombineObjects : MonoBehaviour
         draggingObject = null;
     }
 }
+
+
+//hot and cold relationship
+
