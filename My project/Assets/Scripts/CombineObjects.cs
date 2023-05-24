@@ -35,7 +35,7 @@ public class CombineObjects : MonoBehaviour
         {
             // Combine the dragging object with the parent object
             draggingObject.transform.parent = parentObject;
-            draggingObject.GetComponent<SpriteRenderer>().sortingOrder = 1;
+            draggingObject.GetComponent<SpriteRenderer>().sortingOrder = 2;
         }
 
         // Reset the dragging object

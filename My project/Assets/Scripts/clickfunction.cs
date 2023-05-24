@@ -8,30 +8,31 @@ public class clickfunction : MonoBehaviour
 {
     public Canvas CanvasObject; // Assign in inspector
     public TextMeshProUGUI orderText;//inspector
+    public GameObject textgameobject;
 
-
-    bool red_sauce = false;
-    bool cheese = false;
-    bool pepperoni = false;
-    bool mushroom = false;
-    bool olive = false;
+    public bool red_sauce = false;
+    public bool cheese = false;
+    public bool pepperoni = false;
+    public bool mushroom = false;
+    public bool olive = false;
     string order = "";
 
     void Start()
     {
         CanvasObject = GetComponent<Canvas>();
         CanvasObject.enabled = !CanvasObject.enabled;
+        order = "";
+        GenerateNewOrder();
     }
 
     void Update()
     {
         if (Input.GetKeyUp(KeyCode.Escape))
         {
-            order = "";
-            GenerateNewOrder();
             orderText.GetComponent<TextMeshProUGUI>().text = "Please make me a pizza with: \n" + order;
 
             CanvasObject.enabled = !CanvasObject.enabled;
+            //textgameobject.SetActive(true);
         }
     }
 
