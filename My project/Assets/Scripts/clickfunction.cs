@@ -8,7 +8,6 @@ public class clickfunction : MonoBehaviour
 {
     public Canvas CanvasObject; // Assign in inspector
     public TextMeshProUGUI orderText;//inspector
-    public GameObject textgameobject;
 
     public bool red_sauce = false;
     public bool cheese = false;
@@ -21,7 +20,7 @@ public class clickfunction : MonoBehaviour
     {
         CanvasObject = GetComponent<Canvas>();
         CanvasObject.enabled = !CanvasObject.enabled;
-        order = "";
+        //order = "";
         GenerateNewOrder();
     }
 
@@ -30,9 +29,7 @@ public class clickfunction : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Escape))
         {
             orderText.GetComponent<TextMeshProUGUI>().text = "Please make me a pizza with: \n" + order;
-
             CanvasObject.enabled = !CanvasObject.enabled;
-            //textgameobject.SetActive(true);
         }
     }
 

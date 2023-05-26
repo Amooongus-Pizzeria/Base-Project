@@ -680,7 +680,7 @@ GameObject:
   - component: {fileID: 181785786}
   - component: {fileID: 181785789}
   - component: {fileID: 181785788}
-  - component: {fileID: 181785787}
+  - component: {fileID: 181785790}
   m_Layer: 0
   m_Name: Draggable Pepperoni (4)
   m_TagString: Interactable
@@ -703,19 +703,6 @@ Transform:
   m_Father: {fileID: 1245149915}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &181785787
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 181785785}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 991c8b1dc3fb506438d256654ab47f09, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parentObject: {fileID: 353689384}
 --- !u!58 &181785788
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -784,6 +771,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &181785790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181785785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ad98d4a55126464991e436775d7029d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mergedParent: {fileID: 353689383}
+  isDragging: 0
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &210389204
 GameObject:
   m_ObjectHideFlags: 0
@@ -1089,10 +1091,10 @@ GameObject:
   - component: {fileID: 353689384}
   - component: {fileID: 353689387}
   - component: {fileID: 353689386}
-  - component: {fileID: 353689385}
   - component: {fileID: 353689389}
   - component: {fileID: 353689388}
   - component: {fileID: 353689390}
+  - component: {fileID: 353689391}
   m_Layer: 0
   m_Name: Blank Pizza Dough
   m_TagString: Interactable
@@ -1116,19 +1118,6 @@ Transform:
   m_Father: {fileID: 996157795}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &353689385
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 353689383}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 991c8b1dc3fb506438d256654ab47f09, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parentObject: {fileID: 353689384}
 --- !u!58 &353689386
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1209,6 +1198,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 555267f69cdb54f2baeee8006a02cb53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactObject: {fileID: 0}
+  minScale: {x: 0, y: 0, z: 0}
+  scalingSpeed: 0
+  scalingDuration: 0
 --- !u!114 &353689389
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1236,6 +1229,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7664d50fc9bc54b5fb7d98a4209924a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!111 &353689391
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 353689383}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &365155190
 GameObject:
   m_ObjectHideFlags: 0
@@ -1247,7 +1255,7 @@ GameObject:
   - component: {fileID: 365155191}
   - component: {fileID: 365155194}
   - component: {fileID: 365155193}
-  - component: {fileID: 365155192}
+  - component: {fileID: 365155195}
   m_Layer: 0
   m_Name: Draggable Pepperoni (5)
   m_TagString: Interactable
@@ -1270,19 +1278,6 @@ Transform:
   m_Father: {fileID: 1245149915}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &365155192
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 365155190}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 991c8b1dc3fb506438d256654ab47f09, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parentObject: {fileID: 353689384}
 --- !u!58 &365155193
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1351,6 +1346,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &365155195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 365155190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ad98d4a55126464991e436775d7029d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mergedParent: {fileID: 353689383}
+  isDragging: 0
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &370048520
 GameObject:
   m_ObjectHideFlags: 0
@@ -1676,7 +1686,7 @@ GameObject:
   - component: {fileID: 425017645}
   - component: {fileID: 425017648}
   - component: {fileID: 425017647}
-  - component: {fileID: 425017646}
+  - component: {fileID: 425017649}
   m_Layer: 0
   m_Name: Draggable Pepperoni (14)
   m_TagString: Interactable
@@ -1699,19 +1709,6 @@ Transform:
   m_Father: {fileID: 1245149915}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &425017646
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 425017644}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 991c8b1dc3fb506438d256654ab47f09, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parentObject: {fileID: 353689384}
 --- !u!58 &425017647
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1780,6 +1777,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &425017649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 425017644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ad98d4a55126464991e436775d7029d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mergedParent: {fileID: 353689383}
+  isDragging: 0
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &426331338
 GameObject:
   m_ObjectHideFlags: 0
@@ -1791,7 +1803,7 @@ GameObject:
   - component: {fileID: 426331339}
   - component: {fileID: 426331342}
   - component: {fileID: 426331341}
-  - component: {fileID: 426331340}
+  - component: {fileID: 426331343}
   m_Layer: 0
   m_Name: Draggable Pepperoni (7)
   m_TagString: Interactable
@@ -1814,19 +1826,6 @@ Transform:
   m_Father: {fileID: 1245149915}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &426331340
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 426331338}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 991c8b1dc3fb506438d256654ab47f09, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parentObject: {fileID: 353689384}
 --- !u!58 &426331341
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1895,6 +1894,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &426331343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 426331338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ad98d4a55126464991e436775d7029d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mergedParent: {fileID: 353689383}
+  isDragging: 0
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &442843312
 GameObject:
   m_ObjectHideFlags: 0
@@ -2220,7 +2234,7 @@ GameObject:
   - component: {fileID: 562140228}
   - component: {fileID: 562140231}
   - component: {fileID: 562140230}
-  - component: {fileID: 562140229}
+  - component: {fileID: 562140232}
   m_Layer: 0
   m_Name: Draggable Pepperoni (6)
   m_TagString: Interactable
@@ -2243,19 +2257,6 @@ Transform:
   m_Father: {fileID: 1245149915}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &562140229
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 562140227}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 991c8b1dc3fb506438d256654ab47f09, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parentObject: {fileID: 353689384}
 --- !u!58 &562140230
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2324,6 +2325,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &562140232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 562140227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ad98d4a55126464991e436775d7029d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mergedParent: {fileID: 353689383}
+  isDragging: 0
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &568035407
 GameObject:
   m_ObjectHideFlags: 0
@@ -2753,7 +2769,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CanvasObject: {fileID: 673613060}
   orderText: {fileID: 1558549962}
-  textgameobject: {fileID: 0}
   red_sauce: 0
   cheese: 0
   pepperoni: 0
@@ -3814,7 +3829,9 @@ GameObject:
   m_Component:
   - component: {fileID: 996157795}
   - component: {fileID: 996157794}
+  - component: {fileID: 996157797}
   - component: {fileID: 996157796}
+  - component: {fileID: 996157798}
   m_Layer: 0
   m_Name: Pizza Movement (1)
   m_TagString: Untagged
@@ -3890,7 +3907,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &996157796
+--- !u!58 &996157796
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 996157793}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.30226183}
+  serializedVersion: 2
+  m_Radius: 5.9911017
+--- !u!114 &996157797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 996157793}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b30661661ad85422e87674d0c0f78d3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &996157798
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3899,9 +3944,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 996157793}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42c0e3b14c9d55549a6f47c8a2c9e204, type: 3}
+  m_Script: {fileID: 11500000, guid: 3ad98d4a55126464991e436775d7029d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mergedParent: {fileID: 353689383}
+  isDragging: 0
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &1022760854
 GameObject:
   m_ObjectHideFlags: 0
@@ -4469,7 +4517,7 @@ GameObject:
   - component: {fileID: 1247781395}
   - component: {fileID: 1247781398}
   - component: {fileID: 1247781397}
-  - component: {fileID: 1247781396}
+  - component: {fileID: 1247781399}
   m_Layer: 0
   m_Name: Draggable Pepperoni (15)
   m_TagString: Interactable
@@ -4492,19 +4540,6 @@ Transform:
   m_Father: {fileID: 1245149915}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1247781396
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1247781394}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 991c8b1dc3fb506438d256654ab47f09, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parentObject: {fileID: 353689384}
 --- !u!58 &1247781397
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4573,6 +4608,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1247781399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1247781394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ad98d4a55126464991e436775d7029d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mergedParent: {fileID: 353689383}
+  isDragging: 0
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &1320974360
 GameObject:
   m_ObjectHideFlags: 0
@@ -4987,7 +5037,7 @@ GameObject:
   - component: {fileID: 1397584816}
   - component: {fileID: 1397584819}
   - component: {fileID: 1397584818}
-  - component: {fileID: 1397584817}
+  - component: {fileID: 1397584820}
   m_Layer: 0
   m_Name: Draggable Pepperoni (10)
   m_TagString: Interactable
@@ -5010,19 +5060,6 @@ Transform:
   m_Father: {fileID: 1245149915}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1397584817
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1397584815}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 991c8b1dc3fb506438d256654ab47f09, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parentObject: {fileID: 353689384}
 --- !u!58 &1397584818
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -5091,6 +5128,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1397584820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1397584815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ad98d4a55126464991e436775d7029d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mergedParent: {fileID: 353689383}
+  isDragging: 0
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &1407493100
 GameObject:
   m_ObjectHideFlags: 0
@@ -5531,7 +5583,7 @@ GameObject:
   - component: {fileID: 1465542014}
   - component: {fileID: 1465542017}
   - component: {fileID: 1465542016}
-  - component: {fileID: 1465542015}
+  - component: {fileID: 1465542018}
   m_Layer: 0
   m_Name: Draggable Pepperoni (12)
   m_TagString: Interactable
@@ -5554,19 +5606,6 @@ Transform:
   m_Father: {fileID: 1245149915}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1465542015
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1465542013}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 991c8b1dc3fb506438d256654ab47f09, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parentObject: {fileID: 353689384}
 --- !u!58 &1465542016
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -5635,6 +5674,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1465542018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1465542013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ad98d4a55126464991e436775d7029d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mergedParent: {fileID: 353689383}
+  isDragging: 0
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &1502201397
 GameObject:
   m_ObjectHideFlags: 0
@@ -5646,7 +5700,7 @@ GameObject:
   - component: {fileID: 1502201398}
   - component: {fileID: 1502201401}
   - component: {fileID: 1502201400}
-  - component: {fileID: 1502201399}
+  - component: {fileID: 1502201402}
   m_Layer: 0
   m_Name: Draggable Pepperoni (3)
   m_TagString: Interactable
@@ -5669,19 +5723,6 @@ Transform:
   m_Father: {fileID: 1245149915}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1502201399
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1502201397}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 991c8b1dc3fb506438d256654ab47f09, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parentObject: {fileID: 353689384}
 --- !u!58 &1502201400
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -5750,6 +5791,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1502201402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1502201397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ad98d4a55126464991e436775d7029d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mergedParent: {fileID: 353689383}
+  isDragging: 0
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &1558549961
 GameObject:
   m_ObjectHideFlags: 0
@@ -5870,9 +5926,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2ed8bcceeb3f4e98b64c6cbce27fdc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CanvasObject: {fileID: 0}
+  CanvasObject: {fileID: 1098531500}
   orderText: {fileID: 0}
-  textgameobject: {fileID: 0}
   red_sauce: 0
   cheese: 0
   pepperoni: 0
@@ -6231,7 +6286,7 @@ GameObject:
   - component: {fileID: 1621234359}
   - component: {fileID: 1621234362}
   - component: {fileID: 1621234361}
-  - component: {fileID: 1621234360}
+  - component: {fileID: 1621234363}
   m_Layer: 0
   m_Name: Draggable Pepperoni (11)
   m_TagString: Interactable
@@ -6254,19 +6309,6 @@ Transform:
   m_Father: {fileID: 1245149915}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1621234360
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1621234358}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 991c8b1dc3fb506438d256654ab47f09, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parentObject: {fileID: 353689384}
 --- !u!58 &1621234361
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -6335,6 +6377,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1621234363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1621234358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ad98d4a55126464991e436775d7029d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mergedParent: {fileID: 353689383}
+  isDragging: 0
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &1630859551
 GameObject:
   m_ObjectHideFlags: 0
@@ -6927,7 +6984,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.22500896, y: 0.5885501}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -6938,7 +6995,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 15.37, y: 14.66}
+  m_Size: {x: 8.3197, y: 5.7476606}
   m_EdgeRadius: 0
 --- !u!212 &1758068299
 SpriteRenderer:
@@ -7004,6 +7061,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 555267f69cdb54f2baeee8006a02cb53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactObject: {fileID: 353689383}
+  minScale: {x: 2, y: 2, z: 2}
+  scalingSpeed: 2
+  scalingDuration: 0
 --- !u!1 &1765565408
 GameObject:
   m_ObjectHideFlags: 0
@@ -7214,7 +7275,7 @@ GameObject:
   - component: {fileID: 1773061356}
   - component: {fileID: 1773061359}
   - component: {fileID: 1773061358}
-  - component: {fileID: 1773061357}
+  - component: {fileID: 1773061360}
   m_Layer: 0
   m_Name: Draggable Pepperoni (8)
   m_TagString: Interactable
@@ -7237,19 +7298,6 @@ Transform:
   m_Father: {fileID: 1245149915}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1773061357
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1773061355}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 991c8b1dc3fb506438d256654ab47f09, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parentObject: {fileID: 353689384}
 --- !u!58 &1773061358
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -7318,6 +7366,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1773061360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1773061355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ad98d4a55126464991e436775d7029d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mergedParent: {fileID: 353689383}
+  isDragging: 0
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &1790503759
 GameObject:
   m_ObjectHideFlags: 0
@@ -7415,7 +7478,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea2d21c9fbc9a49a0b536ebf0e5aa384, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 10
 --- !u!1 &1792916226
 GameObject:
   m_ObjectHideFlags: 0
@@ -7495,7 +7557,7 @@ GameObject:
   - component: {fileID: 1834694065}
   - component: {fileID: 1834694068}
   - component: {fileID: 1834694067}
-  - component: {fileID: 1834694066}
+  - component: {fileID: 1834694069}
   m_Layer: 0
   m_Name: Draggable Pepperoni (9)
   m_TagString: Interactable
@@ -7518,19 +7580,6 @@ Transform:
   m_Father: {fileID: 1245149915}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1834694066
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1834694064}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 991c8b1dc3fb506438d256654ab47f09, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parentObject: {fileID: 353689384}
 --- !u!58 &1834694067
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -7599,6 +7648,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1834694069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1834694064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ad98d4a55126464991e436775d7029d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mergedParent: {fileID: 353689383}
+  isDragging: 0
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &1861608001
 GameObject:
   m_ObjectHideFlags: 0
@@ -8232,7 +8296,7 @@ GameObject:
   - component: {fileID: 1955029708}
   - component: {fileID: 1955029711}
   - component: {fileID: 1955029710}
-  - component: {fileID: 1955029709}
+  - component: {fileID: 1955029712}
   m_Layer: 0
   m_Name: Draggable Pepperoni (2)
   m_TagString: Interactable
@@ -8255,19 +8319,6 @@ Transform:
   m_Father: {fileID: 1245149915}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1955029709
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1955029707}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 991c8b1dc3fb506438d256654ab47f09, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parentObject: {fileID: 353689384}
 --- !u!58 &1955029710
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -8336,6 +8387,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1955029712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1955029707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ad98d4a55126464991e436775d7029d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mergedParent: {fileID: 353689383}
+  isDragging: 0
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &2039018514
 GameObject:
   m_ObjectHideFlags: 0
@@ -8347,7 +8413,7 @@ GameObject:
   - component: {fileID: 2039018515}
   - component: {fileID: 2039018518}
   - component: {fileID: 2039018517}
-  - component: {fileID: 2039018516}
+  - component: {fileID: 2039018519}
   m_Layer: 0
   m_Name: Draggable Pepperoni (13)
   m_TagString: Interactable
@@ -8370,19 +8436,6 @@ Transform:
   m_Father: {fileID: 1245149915}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2039018516
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2039018514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 991c8b1dc3fb506438d256654ab47f09, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parentObject: {fileID: 353689384}
 --- !u!58 &2039018517
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -8451,6 +8504,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2039018519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2039018514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ad98d4a55126464991e436775d7029d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mergedParent: {fileID: 353689383}
+  isDragging: 0
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &2040376740
 GameObject:
   m_ObjectHideFlags: 0
@@ -8839,7 +8907,7 @@ GameObject:
   - component: {fileID: 2133270228}
   - component: {fileID: 2133270231}
   - component: {fileID: 2133270230}
-  - component: {fileID: 2133270229}
+  - component: {fileID: 2133270232}
   m_Layer: 0
   m_Name: Draggable Pepperoni
   m_TagString: Interactable
@@ -8862,19 +8930,6 @@ Transform:
   m_Father: {fileID: 1245149915}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2133270229
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2133270227}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 991c8b1dc3fb506438d256654ab47f09, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parentObject: {fileID: 353689384}
 --- !u!58 &2133270230
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -8943,6 +8998,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2133270232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2133270227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ad98d4a55126464991e436775d7029d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mergedParent: {fileID: 353689383}
+  isDragging: 0
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &2136233806
 GameObject:
   m_ObjectHideFlags: 0
@@ -8954,7 +9024,7 @@ GameObject:
   - component: {fileID: 2136233807}
   - component: {fileID: 2136233810}
   - component: {fileID: 2136233809}
-  - component: {fileID: 2136233808}
+  - component: {fileID: 2136233811}
   m_Layer: 0
   m_Name: Draggable Pepperoni (1)
   m_TagString: Interactable
@@ -8977,19 +9047,6 @@ Transform:
   m_Father: {fileID: 1245149915}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2136233808
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2136233806}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 991c8b1dc3fb506438d256654ab47f09, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parentObject: {fileID: 353689384}
 --- !u!58 &2136233809
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -9058,3 +9115,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2136233811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2136233806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ad98d4a55126464991e436775d7029d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mergedParent: {fileID: 353689383}
+  isDragging: 0
+  offset: {x: 0, y: 0, z: 0}
